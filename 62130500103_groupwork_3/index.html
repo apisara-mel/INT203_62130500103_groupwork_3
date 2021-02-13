@@ -22,13 +22,13 @@
 
 </head>
 
-<body>
-  <div id="app" class="max-w-xl xm-auto my-10 space-y-3">
-    <h1 class="text-xl">Photo Gallery</h1>
+<body class="bg-yellow-200">
+  <div id="app" class="font-mono justify-items-center">
+    <h1 class="text-3xl">Photo Gallery</h1>
     <ul>
       <li v-for="(task, index) in tasks" :class="{done: task.done}">
-        <img :src="task.img">
-        <button class="bg-green-500 text-white py-1 px-2 rounded">
+        <img :src="task.img" width="150" class="w-40 h-45 rounded-lg">
+        <button class="bg-blue-400 text-white py-1 px-2 rounded mt-4 mb-8">
           Like
         </button>
       </li>
