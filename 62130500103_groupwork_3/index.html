@@ -22,18 +22,27 @@
 
 </head>
 
-<body class="bg-yellow-200">
-  <div id="app" class="font-mono justify-items-center">
+<body class="bg-yellow-200 ">
+  <div class="text-center mt-8">
     <h1 class="text-3xl">Photo Gallery</h1>
-    <ul>
-      <li v-for="(task, index) in tasks" :class="{done: task.done}">
-        <img :src="task.img" width="150" class="w-40 h-45 rounded-lg">
-        <button class="bg-blue-400 text-white py-1 px-2 rounded mt-4 mb-8">
-          Like
-        </button>
-      </li>
-    </ul>
   </div>
+
+  <div class="items-center w-full">
+    <div id="app" class="font-mono ">
+      <ul>
+        <li v-for="(task, index) in tasks" :class="{done: task.done}">
+          <img :src="task.img" width="150" class="w-40 h-45 rounded-lg">
+          <button class="bg-blue-500 hover:bg-blue-700 text-white py-1 px-2 rounded mt-4 mb-8" @click="toggleDone(index)">
+            Like
+          </button>
+          <span class="material-icons ml-20 text-blue-700 align-middle" v-show="task.done">
+            thumb_up
+            </span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
   <script src="main.js"></script>
 </body>
 
